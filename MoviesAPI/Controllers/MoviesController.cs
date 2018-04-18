@@ -25,11 +25,11 @@ namespace MoviesAPI.Controllers
             return newMovie;
         }
 
-        public IEnumerable<Movie> GetMovieGenre(string genre)
+        public IEnumerable<Movie> GetMovieByGenre(string genre)
         {
             var db = new DataContext();
-            var horrorMovies = db.Movies.Where(movie => movie.Genre == genre);
-            return horrorMovies;
+            var moviesByGenre = db.Movies.Where(movie => movie.Genre == genre);
+            return moviesByGenre;
         }
     }
 }
